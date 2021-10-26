@@ -1,0 +1,13 @@
+{
+  "name": "mint-to-receiver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "borsh": "^0.6.0",
+    "@solana/spl-token": "^0.1.8",
+    "@solana/web3.js": "^1.24.0",
+    "bs58": "^4.0.1",
+    "@types/bs58": "^4.0.1"
+  }
+}
