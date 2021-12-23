@@ -30,6 +30,10 @@ const METAPLEX_PROGRAM_ID = new PublicKey(
   "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
 );
 
+function delay(ms: number) {
+  return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
 async function main() {
   let connection: Connection = new Connection(
     "https://api.devnet.solana.com",
@@ -39,6 +43,8 @@ async function main() {
   let creator = new Keypair();
 
   await connection.requestAirdrop(creator.publicKey, 1 * LAMPORTS_PER_SOL);
+  
+  await delay(1000);
 
   let user = new PublicKey("AVdBTNhDqYgXGaaVkqiaUJ1Yqa61hMiFFaVRtqwzs5GZ");
 
